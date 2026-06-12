@@ -72,15 +72,15 @@ npm run install:all
 ```
 
 ### 2. Konfigurasi Environment
-Edit file .env di root:
 
+Edit file `.env` di root:
+
+```env
 MONGODB_URI=mongodb://localhost:27017/aceh_export_db
 JWT_SECRET=aceh_export_secret_key_2024
-ETSY_API_KEY=your_etsy_api_key_here  
-
-
-di bagian ini di readme ubah di etsy_api_keynya jadi gini:
-ETSY_API_KEY=your_etsy_api_key_here :shared_secret
+ETSY_API_KEY=your_etsy_api_key_here:shared_secret  #opsional pakai mock jika kosong
+```
+> **Tanpa Etsy API key** pun bisa jalan — sistem otomatis pakai data mock realistis.
 
 ### 3. Seed Database (akun & produk demo)
 
@@ -227,7 +227,17 @@ aceh-export-system/
 | POST | `/api/recommendations/for-product` | Rekomendasi untuk produk |
 
 ---
+## 🛠️ Tech Stack
 
+| Layer | Teknologi |
+|-------|-----------|
+| Frontend | React 18, React Router v6, Tailwind CSS, Recharts |
+| API Gateway | Express.js, http-proxy-middleware, JWT |
+| Auth Service | Express.js, Mongoose, bcryptjs, JWT |
+| Product Service | Express.js, Mongoose |
+| Trend Service | Express.js, Mongoose, Axios, node-cron, **Etsy API** |
+| Recommendation | Express.js, algoritma scoring berbasis tren |
+| Database | MongoDB |
 ---
 
 ## 🌟 Fitur Utama
