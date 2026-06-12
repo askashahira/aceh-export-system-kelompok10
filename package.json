@@ -1,0 +1,19 @@
+{
+  "name": "aceh-export-system",
+  "version": "1.0.0",
+  "description": "Sistem Rekomendasi Pasar Ekspor Produk Kerajinan Aceh",
+  "scripts": {
+    "install:all": "npm install && cd api-gateway && npm install && cd ../services/auth-service && npm install && cd ../product-service && npm install && cd ../trend-service && npm install && cd ../recommendation-service && npm install && cd ../../frontend && npm install",
+    "start:gateway": "cd api-gateway && npm start",
+    "start:auth": "cd services/auth-service && npm start",
+    "start:product": "cd services/product-service && npm start",
+    "start:trend": "cd services/trend-service && npm start",
+    "start:recommendation": "cd services/recommendation-service && npm start",
+    "start:frontend": "cd frontend && npm start",
+    "dev": "concurrently \"npm run start:auth\" \"npm run start:product\" \"npm run start:trend\" \"npm run start:recommendation\" \"npm run start:gateway\" \"npm run start:frontend\"",
+    "start": "npm run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
