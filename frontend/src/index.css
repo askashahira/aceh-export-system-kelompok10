@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { font-family: 'Inter', sans-serif; }
+
+body { background-color: #f0f4f8; }
+
+.card { @apply bg-white rounded-2xl shadow-sm border border-gray-100 p-6; }
+.btn-primary { @apply bg-blue-900 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-800 transition-colors; }
+.btn-accent { @apply bg-cyan-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-cyan-600 transition-colors; }
+.btn-outline { @apply border border-blue-900 text-blue-900 px-4 py-2 rounded-lg font-medium hover:bg-blue-50 transition-colors; }
+.input { @apply w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400 text-sm; }
+.label { @apply block text-sm font-medium text-gray-700 mb-1; }
+.badge-tinggi { @apply bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full font-medium; }
+.badge-sedang { @apply bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full font-medium; }
+.badge-rendah { @apply bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full font-medium; }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
